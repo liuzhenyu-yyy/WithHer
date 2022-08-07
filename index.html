@@ -46,10 +46,6 @@
         <div id="code">
         </div>
       </div>
-      <div id="clock-box"> <span class="STYLE1"></span>
-        <font color="#ff5e04">亲爱的宝贝，与你坠入爱河</font> <span class="STYLE1">已经……</span>
-        <div id="clock"></div>
-      </div>
       <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
   </div>
@@ -165,7 +161,6 @@
         foot.draw();
         tree.snapshot("p2", 500, 0, 610, 680);
 
-        // 会有闪烁不得意这样做, (＞﹏＜)
         canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
         canvas.css("background", "#ffe");
         $await(Jscex.Async.sleep(300));
@@ -184,12 +179,12 @@
 
       var textAnimate = eval(Jscex.compile("async", function () {
         var together = new Date();
-        together.setFullYear(1998, 3, 13); 			//时间年月日
-        together.setHours(0);						//小时	
-        together.setMinutes(0);					//分钟
-        together.setSeconds(0);					//秒前一位
-        together.setMilliseconds(0);				//秒第二位
-
+        together.setFullYear(1998, 3, 13); 
+        together.setHours(0);	
+        together.setMinutes(0);	
+        together.setSeconds(0);	
+        together.setMilliseconds(0);	
+        
         $("#code").show().typewriter();
         $("#clock-box").fadeIn(500);
         while (true) {
